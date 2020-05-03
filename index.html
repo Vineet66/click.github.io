@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!---->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+    <style>
+        .bg{
+            background: url('im.jpg');
+            width: 100%;
+            height: 100vh;
+        }
+        .form-container{
+            position: absolute;
+            top: 15vh;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+        
+    </style>
+    </head>
+    <body>
+    <section class="container-fluid bg">
+        <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-md-3">
+            <form class="form-container">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="" id="name"  placeholder="Name">
+    
+  </div>
+  <div class="form-group">
+    <label>Pair Name</label>
+    <input type="text" class="form-control" name="" id="lname" placeholder="Pair name">
+  </div>
+  
+  <button type="button" class="btn btn-primary btn-block" onclick="check()">Check</button>
+    <div class="form-group">
+    <label>Percentage</label>
+    <input type="text" class="form-control" id="f1" placeholder="Percentage">
+  </div>
+                <div class="text-center" style="padding-top:15px;">Love Calculator <i class="fa fa-refresh" id="bu" style="padding-left: 20px;"></i>
+ </div>
+                
+</form>
+            
+            
+            
+            </section>
+        
+        
+        </section>
+        
+        </section>
+    <script>
+        function check(){
+           var name=document.getElementById('name').value;
+            var lname=document.getElementById('lname').value;
+            
+            if(name==""){
+                alert('please enter name')
+            }else if(name.length<=2){
+                    alert('min length is 3')
+                }else if(!isNaN(name)){
+                    alert('only characters are allowed')
+                }
+          else if(lname==""){
+                alert('please enter Pair name')
+            }else if(lname.length<=2){
+                    alert('min length is 3')
+                }else if(!isNaN(name)){
+                    alert('only characters are allowed')
+                }
+            else{
+                var data=Math.random()* 100;
+            data=Math.floor(data);
+            document.getElementById('f1').value=data + "%";
+          
+                
+            }
+            
+            
+        }
+        $(document).ready(function(){
+        $("#bu").click(function(){
+            location.reload(true);
+        });
+    });
+        </script>
+    </body>
+</html>
